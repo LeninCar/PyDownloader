@@ -1,5 +1,6 @@
 import subprocess
 import os
+import json
 
 def descargar_video(url, directorio_destino, nombre_personalizado):
     if not os.path.exists(directorio_destino):
@@ -15,29 +16,44 @@ def extraer_audio(titulo_video, video_path, directorio_destino):
 
 if __name__ == '__main__':
     # URL del nuevo vídeo de YouTube a descargar
-    url_canal = "https://www.youtube.com/@TEDEdEspanol"
+    # url_canal = "https://www.youtube.com/@TEDEdEspanol"
+
+    with open('canales.json', 'r') as file:
+        data = json.load(file)
 
     # Directorio donde se guardarán los archivos descargados
     directorio_destino = "/home/lecm/Videos"
 
-    comando_nombre = subprocess.check_output(['yt-dlp', '--flat-playlist', '-e', '--playlist-end', '5', url_canal], text=True)
+    for canal in data:
 
-    array_titulos = comando_nombre.strip().split('\n')
+        nombre_canal = canal['nombre']
+        url_canal = canal['url']
+        
+        print("##" * 25)
+        print("##" + " " * 21 + f'Descargando vídeos de {nombre_canal}...')
+        print("##" * 25)
 
-    comando_urls = subprocess.check_output(['yt-dlp', '--flat-playlist', '-g', '--playlist-end', '5', url_canal], text=True)
+        comando_nombre = subprocess.check_output(['yt-dlp', '--flat-playlist', '-e', '--playlist-end', '2', url_canal], text=True)
 
-    array_urls = comando_urls.strip().split('\n')
+        array_titulos = comando_nombre.strip().split('\n')
 
-    for titulo_video, url_video in zip(array_titulos, array_urls):
+        comando_urls = subprocess.check_output(['yt-dlp', '--flat-playlist', '-g', '--playlist-end', '2', url_canal], text=True)
 
-        extension = subprocess.check_output(['yt-dlp', '--flat-playlist', '--get-filename', '-o', '%(ext)s', url_video], text=True).strip()
+        array_urls = comando_urls.strip().split('\n')
 
-        titulo_video = titulo_video.replace("-", "")
-        # Descargar el vídeo
-        descargar_video(url_video, directorio_destino, titulo_video)
+        for titulo_video, url_video in zip(array_titulos, array_urls):
 
-        # Obtener la ruta del vídeo descargado
-        video_path = f'{directorio_destino}/{titulo_video}.{extension}'
+            extension = subprocess.check_output(['yt-dlp', '--flat-playlist', '--get-filename', '-o', '%(ext)s', url_video], text=True).strip()
 
-        # Extraer el audio del vídeo
-        extraer_audio(titulo_video, video_path, directorio_destino)
+            titulo_video = titulo_video.replace("-", "").replace(",", "").replace("!", "")
+            # Descargar el vídeo
+            descargar_video(url_video, directorio_destino, titulo_video)
+
+            # Obtener la ruta del vídeo descargado
+            video_path = f'{directorio_destino}/{titulo_video}.{extension}'
+
+            # Extraer el audio del vídeo
+            extraer_audio(titulo_video, video_path, directorio_destino)
+
+        
+        print(f'Vídeos de {nombre_canal} descargados correctamente.\n')

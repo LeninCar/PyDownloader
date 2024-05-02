@@ -7,6 +7,7 @@ def descargar_video(url, directorio_destino, nombre_personalizado):
     if not os.path.exists(directorio_destino):
         os.makedirs(directorio_destino)
     comando_descarga = ['yt-dlp', '-x', '-o', f'{directorio_destino}/{nombre_personalizado}', '--audio-format', 'mp3', url] # sólo audio, formato mp3
+    comando_descarga = ['yt-dlp', '-x', '--playlist-end', '5', '-o', f'{directorio_destino}/{nombre_personalizado}', '--audio-format', 'mp3', url] # sólo audio, formato mp3
     subprocess.run(comando_descarga)
 
 # URL del nuevo vídeo de YouTube a descargar

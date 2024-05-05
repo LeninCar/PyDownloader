@@ -1,4 +1,4 @@
 # PyDownloader
 
-# Lenin 
-# Wilson Camilo Garces Zuñiga 2310105-3743
+## Lenin Esteban Carabali Moreno 2310025-3743
+### Wilson Camilo Garces Zuñiga 2310105-3743

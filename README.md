@@ -16,7 +16,7 @@ sudo apt install ffmpeg
 # Instalación en Windows
 ## yt-dlp
 Para instalar yt-dlp en Windows, puedes utilizar pip desde la línea de comandos:
-pip install yt-dlp
+```bash pip install yt-dlp```
 ## ffmpeg
 Para instalar ffmpeg en Windows, puedes descargar el paquete binario desde el sitio web oficial de ffmpeg (https://ffmpeg.org/download.html) y seguir las instrucciones de instalación proporcionadas.
 No olvides agregar ffmpeg en el PATH.

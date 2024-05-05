@@ -1,5 +1,11 @@
 # Automatizador de Descarga y Extracción de Audios de YouTube
 Este proyecto consiste en una aplicación que automatiza la descarga de vídeos de cinco canales de YouTube y extrae los audios correspondientes. En total, se descargan 25 vídeos y se obtienen 25 audios.
+# Lógica de la Aplicación
+El funcionamiento de la aplicación sigue estos pasos:
+1. Obtención de URLs de los Vídeos: La aplicación recopila las URLs de los vídeos de los cinco canales de YouTube especificados.
+2. Descarga de Vídeos: Utilizando la herramienta yt-dlp, la aplicación descarga los vídeos correspondientes a las URLs recopiladas.
+3. Extracción de Audios: Una vez descargados los vídeos, la aplicación utiliza ffmpeg para extraer el audio de cada uno de ellos.
+4. Guardado de Audios: Los audios extraídos se guardan en el sistema de archivos local, listos para su posterior uso.
 # Requisitos
 para ejecutar esta aplicación, necesitarás tener instalado los siguientes programas:
 - python3: lenguaje de programación

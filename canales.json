@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Canal 1",
-        "url": "https://www.youtube.com/@Akon"
+        "url": "https://www.youtube.com/@kendricklamar"
     },
     {
         "nombre": "Canal 2",
@@ -9,6 +9,14 @@
     },
     {
         "nombre": "Canal 3",
-        "url": "https://www.youtube.com/@ismaelkrall"
+        "url": "https://www.youtube.com/@CigarettesAfterSex"
+    },
+    {
+        "nombre": "Canal 4",
+        "url": "https://www.youtube.com/@lebronbrothers/"
+    },
+    {
+        "nombre": "Canal 5",
+        "url": "https://www.youtube.com/@SodaStereo"
     }
 ]

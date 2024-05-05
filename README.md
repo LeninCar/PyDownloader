@@ -9,14 +9,14 @@ Ambas herramientas están disponibles para sistemas operativos Linux y Windows
 # Instalacion en Linux
 ## yt-dlp
 Puedes instalar yt-dlp en Linux utilizando pip:
-pip install yt-dlp
+```pip install yt-dlp```
 ## ffmpeg
 Puedes instalar ffmpeg en Linux utilizando el gestor de paquetes de tu distribución. Por ejemplo, en Ubuntu y otras distribuciones basadas en Debian, puedes usar apt:
-sudo apt install ffmpeg
+```sudo apt install ffmpeg```
 # Instalación en Windows
 ## yt-dlp
 Para instalar yt-dlp en Windows, puedes utilizar pip desde la línea de comandos:
-```bash pip install yt-dlp```
+```pip install yt-dlp```
 ## ffmpeg
 Para instalar ffmpeg en Windows, puedes descargar el paquete binario desde el sitio web oficial de ffmpeg (https://ffmpeg.org/download.html) y seguir las instrucciones de instalación proporcionadas.
 No olvides agregar ffmpeg en el PATH.

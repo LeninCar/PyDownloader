@@ -6,6 +6,13 @@ El funcionamiento de la aplicación sigue estos pasos:
 2. Descarga de Vídeos: Utilizando la herramienta yt-dlp, la aplicación descarga los vídeos correspondientes a las URLs recopiladas.
 3. Extracción de Audios: Una vez descargados los vídeos, la aplicación utiliza ffmpeg para extraer el audio de cada uno de ellos.
 4. Guardado de Audios: Los audios extraídos se guardan en el sistema de archivos local, listos para su posterior uso.
+# Diagrama de Flujo
+A continuación se muestra un diagrama que ilustra el flujo de trabajo de la aplicación:
+graph TD;
+    A[Obtención de URLs de los Vídeos] --> B[Descarga de Vídeos];
+    B --> C[Extracción de Audios];
+    C --> D[Guardado de Audios];
+
 # Requisitos
 para ejecutar esta aplicación, necesitarás tener instalado los siguientes programas:
 - python3: lenguaje de programación

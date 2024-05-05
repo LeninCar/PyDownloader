@@ -37,6 +37,7 @@ Los scripts utilizan yt-dlp para descargar los vídeos de los cinco canales de Y
 - Si el script tiene 'L' es para la version de Linux.
 - Si el script tiene 'W' es para la version de Windows.
 - Existe 3 scripts: secuencial, multithreading, multiprocessing.
+- En el script de multithreading y multiprocessing puedes cambiar el numero de hilos de uso en la variable nh
 # Integrantes:
 - Lenin Esteban Carabali Moreno 2310025-3743
 - Wilson Camilo Garces Zuñiga 2310105-3743

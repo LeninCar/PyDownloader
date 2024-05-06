@@ -6,6 +6,10 @@ El funcionamiento de la aplicación sigue estos pasos:
 2. Descarga de Vídeos: Utilizando la herramienta yt-dlp, la aplicación descarga los vídeos correspondientes a las URLs recopiladas.
 3. Extracción de Audios: Una vez descargados los vídeos, la aplicación utiliza ffmpeg para extraer el audio de cada uno de ellos.
 4. Guardado de Audios: Los audios extraídos se guardan en el sistema de archivos local, listos para su posterior uso.
+# Diagrama de flujo
+
+![Diagrama de Flujo Paralalelas parcial](https://github.com/LeninCar/PyDownloader/assets/102928775/c8164842-68f5-4914-af02-7f4b9d97597e)
+
 # Requisitos
 para ejecutar esta aplicación, necesitarás tener instalado los siguientes programas:
 - python3: lenguaje de programación

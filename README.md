@@ -6,10 +6,6 @@ El funcionamiento de la aplicación sigue estos pasos:
 2. Descarga de Vídeos: Utilizando la herramienta yt-dlp, la aplicación descarga los vídeos correspondientes a las URLs recopiladas.
 3. Extracción de Audios: Una vez descargados los vídeos, la aplicación utiliza ffmpeg para extraer el audio de cada uno de ellos.
 4. Guardado de Audios: Los audios extraídos se guardan en el sistema de archivos local, listos para su posterior uso.
-# Diagrama de flujo
-
-![Diagrama de Flujo Paralalelas parcial](https://github.com/LeninCar/PyDownloader/assets/102928775/c8164842-68f5-4914-af02-7f4b9d97597e)
-
 # Requisitos
 para ejecutar esta aplicación, necesitarás tener instalado los siguientes programas:
 - python3: lenguaje de programación
@@ -43,6 +39,11 @@ Los scripts utilizan yt-dlp para descargar los vídeos de los cinco canales de Y
 - Existe 3 scripts: secuencial, multithreading, multiprocessing.
 - En el script de multithreading y multiprocessing puedes cambiar el numero de hilos de uso en la variable nh
 - Los audios de los videos de YouTube se almacenan en la carpeta raiz de usuario en una carpeta llamada "Audios" y ahi se encuentra el CSV de los audios
+# Diagrama de flujo
+
+![Diagrama de Flujo Paralalelas parcial](https://github.com/LeninCar/PyDownloader/assets/102928775/c8164842-68f5-4914-af02-7f4b9d97597e)
+
+
 # Integrantes:
 - Lenin Esteban Carabali Moreno 2310025-3743 lenin.carabali@correounivalle.edu.co
 - Wilson Camilo Garces Zuñiga 2310105-3743 garces.wilson@correounivalle.edu.co

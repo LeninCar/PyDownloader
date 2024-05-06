@@ -78,7 +78,7 @@ if __name__ == '__main__':
         descargar_video(url_video, directorio_destino, titulo_video)
 
         # Obtener la ruta del vídeo descargado
-        video_path = f'{directorio_destino}\\{titulo_video}.{extension}'
+        video_path = f'{directorio_destino}/{titulo_video}.{extension}'
 
         fecha_publicacion = obtener_fecha_publicacion(url_video)
         fecha_descarga = datetime.now().date()

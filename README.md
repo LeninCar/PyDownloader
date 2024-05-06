@@ -42,6 +42,7 @@ Los scripts utilizan yt-dlp para descargar los vídeos de los cinco canales de Y
 - Si el script tiene 'W' es para la version de Windows.
 - Existe 3 scripts: secuencial, multithreading, multiprocessing.
 - En el script de multithreading y multiprocessing puedes cambiar el numero de hilos de uso en la variable nh
+- Los audios de los videos de YouTube se almacenan en la carpeta raiz de usuario en una carpeta llamada "Audios" y ahi se encuentra el CSV de los audios
 # Integrantes:
 - Lenin Esteban Carabali Moreno 2310025-3743 lenin.carabali@correounivalle.edu.co
 - Wilson Camilo Garces Zuñiga 2310105-3743 garces.wilson@correounivalle.edu.co
